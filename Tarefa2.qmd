@@ -1,0 +1,29 @@
+---
+title: "Tarefa 2"
+format: html
+lang: pt
+---
+
+:::{.callout-warning}
+Seu melhor amigo aqui é a página de referência do Quarto para Revealjs.
+
+[Help Quarto revealJS](https://quarto.org/docs/presentations/revealjs/#overview)
+:::
+
+Cada um deve apresentar seu próprio projeto de pós-graduação ou resultados do estudo usando o modo de apresentação do Quarto chamado RevealJS.
+
+File>New File>Quarto Document>Presentation>
+
+Escolha o tipo RevealJS.
+
+Uma apresentação "em branco" será criada.
+
+A partir daí, crie uma apresentação completa do seu projeto de pós-graduação contendo pelo menos:
+
+- cinco slides
+- muitas figuras, tabelas e fórmulas, se cabível.
+- Riqueza de detalhes.
+- Máximo de Criatividade!
+- Muita pesquisa da sua parte.
+
+

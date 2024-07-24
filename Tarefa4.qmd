@@ -1,0 +1,19 @@
+---
+title: "Tarefa 4"
+format: html
+lang: pt
+---
+
+---
+<br>
+Suponha que o artigo científico da tarefa 3 tenha sido submetido a uma revista científica e tenha sido recusado.  
+<br>
+Sua tarefa será resubmetê-lo a outra publicação científica após *profundas modificações* (fake). Para isso, você deverá usar um modelo em Quarto oferecido pelas revistas científicas na página do [Quarto extensions](https://quarto.org/docs/extensions/listing-journals.html).  
+<br>
+Vamos usar o modelo do [Journals of the American Statistical Association (JASA)](https://github.com/quarto-journals/jasa) para criar um novo pdf do artigo *modificado*. 
+usando texto muito simplificado. Mais uma vez, o formato e a qualidade gráfica são muito importantes e devem preservar os padrões da revista, contendo todos os elementos exigidos, como título, índices, etc.  
+
+<br>
+Quando a criação do pdf estiver concluída, um link deverá ser criado na página do artigo científico para download do pdf.
+
+Bom trabalho!

@@ -1,0 +1,13 @@
+name: ex_shiny5
+title: ex_shiny5
+username:
+account: mauricio-camargo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9470559
+bundleId: 7468592
+url: https://mauricio-camargo.shinyapps.io/ex_shiny5/
+when: 1689645574.38144
+lastSyncTime: 1689645574.38146
+asMultiple: FALSE
+asStatic: FALSE

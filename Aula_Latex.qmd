@@ -1,0 +1,230 @@
+---
+title: "Reprodutibilidade científica"
+subtitle: "Como fazer ciência reproduzível no R"
+author: "Prof. Maurício Garcia de Camargo"
+institute: "Instituto de Oceanografia - FURG" 
+date: "`r Sys.Date()`" #Para funcionar tem que ter o `r Sys.Date()` em qualquer lugar do corpo (atualmente está no footer do primeiro slide)
+lang: pt-br
+title-slide-attributes:
+  data-background-color: "#6b5a59"
+format: 
+  revealjs:
+    #Veja outros temas em https://quarto.org/docs/presentations/revealjs/themes.html
+    theme: [serif, MeuCustom.scss]
+#    logo: images/furg4.png
+#    footer: "`Reprodutibilidade científica`"
+    slide-number: true
+    chalkboard: true #Muito bom para aula
+#    multiplex: false #Os alunos podem seguir com smartfone. ToDo.
+#    show-slide-number: all
+    controls: true #Não é menu. ToDo.
+#    css: [assets/sydney.css, assets/sydney-fonts.css]
+    #Sem estes css o :::box não funciona
+    css: [assets/syntax-highlight.css,assets/sydney.css, assets/custom.css,assets/sydney-fonts.css]
+
+---
+
+## Resumo da aula de hoje
+
+<br><br>
+
+::: box
+- Momento 1: Documentos dinâmicos e programação letrada.
+- Momento 2: O que é o $\TeX$?  
+- Momento 3: O que o $\TeX$ pode fazer?  
+- Momento 4: Por que usar o $\TeX$?  
+- Momento 5: O que é o $\LaTeX$?  
+- Momento 6: Ferramentas para construção de códigos em $\LaTeX$
+- Momento 7: $\LaTeX$ ou RMarkdown?
+- Momento 8: Como usar fórmulas em $\LaTeX$ no RMarkdown?
+:::
+
+::: footer
+```{r}
+# Fake: serve só para que a data apareça no primeiro slide
+ss=Sys.Date()
+```
+:::
+
+
+## Documentos dinâmicos e programação letrada. {.smaller}
+<br>
+**Donald Knuth** criou o conceito de *Literate programming (1984)*: é a arte de escrever programas como se fossem peças de literatura, combinando a documentação (texto humano) com código-fonte (máquina) em um único documento, por isso o nome *Documentação dinâmica*.  
+
+<br>
+
+**Ferramentas de programação letrada:**
+
+- **Sweave**: usa a linguagem $\TeX$ para produzir pdf ou apresentações. 
+- **Jupyter**: usa a linguagem Markdown no para produzir pdf.  
+- **Knitr**: usa a linguagem RMarkdown para produzir pdf, apresentações ou sites.
+
+Na aula de hoje aprenderemos sobre a linguagem ***$\TeX$***.
+
+
+## O que é o $\TeX$?  
+<br>
+
+::: incremental
+- **$\TeX$** um software livre criado em 1978 por **Donald Knuth** para produzir documentos de alta qualidade tipográfica, sendo até hoje conhecido como um dos sistemas de tipografia mais sofisticados do mundo.
+- **$\TeX$** é na realidade um compilador que lê um script de entrada (*.tex*) e produz um arquivo de saída (*.pdf*).
+- A linguagem **$\TeX$** segue as regras e ideias de uma linguagem de programação.
+:::
+
+## O que o $\TeX$ pode fazer? 
+<br>
+
+:::box
+Permite desenvolver documentos complexos, incluindo facilidades para:
+:::
+
+<br>
+
+::: incremental
+  - Gerar sumário, index, lista de figuras, lista de tabelas e
+referências bibliográficas;
+  - Importar e tratar imagens de vários formatos (escalando,
+rotacionando, convertendo, etc.);
+  - Desenvolver gráficos diagramáticos;
+  - Representar partituras musicais, partidas de xadrez,
+fórmulas químicas etc
+:::
+
+## O que é o $\LaTeX$?
+
+<br>
+
+:::box
+$\LaTeX$ = Lamport TeX. Criado por *Leslie Lamport* em 1994.
+:::
+
+<br>
+
+::: incremental
+- $\LaTeX$ é a implementação do $\TeX$ mais popular.  
+- $\LaTeX$ é um conjunto de macros que aperfeiçoaram o $\TeX$, permitindo a criação de pacotes que estendem a sua funcionalidade, como BibTex, MusicTeX etc.
+- Existe uma infinidade de programas que compilam o código em $\LaTeX$, seja desktop para todos os SO ou como ferramentas online.
+:::
+
+## Por que usar o $\TeX$?
+
+<br>
+
+::: incremental
+- A filosofia por trás do $\TeX$ é se concentrar no conteúdo (texto) ao invés da formatação como nos processadores de texto **WYSIWYG** (‘What You See Is What You Get’—‘O que você vê é o que você obtém’).  
+<br>
+- É ideal para documentos técnicos e científicos porque possui capacidade muito grande de processar fórmulas e qualquer tipo de tipografia.  
+<br>
+- Mas também pode ser usado em diferentes tipos de documentos, como  livros, relatórios e cartas.
+:::
+
+## $\LaTeX$ no RStudio através do Sweave
+
+<br>
+
+:::box
+*File>New file> R Sweave* - Cria um novo arquivo com a extensão .rnw
+:::
+
+<br>
+
+Estrutura de um documento vazio em $\LaTeX$
+
+<br>
+
+```latex
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+
+\end{document}
+```
+
+## Exemplos de códigos em $\LaTeX$
+<br>
+
+```latex
+\documentclass{article}
+\usepackage[portuguese]{babel}
+\title{Meu titulo}
+
+\begin{document}
+\maketitle
+
+\abstract{Aqui vai meu resumo Aqui vai meu resumo Aqui vai meu resumo Aqui vai meu resumo}
+
+\tableofcontents
+
+\section{Introdução}
+  
+Aqui vai a introdução Aqui vai a introdução Aqui vai a introdução 
+Aqui vai a introdução Aqui vai a introdução Aqui vai a introdução 
+
+\section{Material e métodos}
+
+Aqui vai o Material e métodos  
+Aqui vai o Material e métodos 
+
+\subsection{Área de estudo}
+\subsection{Análises estatísticas}
+
+\section{Resultados}
+
+
+\end{document}
+
+```
+
+## Ferramentas para construção de códigos em $\LaTeX${.smaller}
+<br>
+
+- Ferramentas desktop (free) para todos os Sistemas Operacionais
+  - RStudio
+  - TeXworks
+  - TeXmaker
+  - Kile
+- Ferramentas online (no so free)
+  - [Overleaf](https://Overleaf.com)
+  - [Authorea](https://authorea.com)
+  - [Verbosus](https://www.verbosus.com)
+  
+## $\LaTeX$ ou RMarkdown?{.smaller}
+<br>
+
+::: incremental
+- RMarkdown pode ser considerado uma simplificação de $\LaTeX$. 
+- No entanto, as funcionalidades mais importantes de $\LaTeX$ para publicação em pdf são encontradas no RMarkdown.
+- É possível usar modelos de documentos em RMarkdown tão ricos quanto em $\LaTeX$.
+- A grande vantagem do RMarkdown é que a mesma linguagem serve para criar pdf, apresentações, livros e websites.
+- Está mais em acordo com o conceito de reprodutibilidade.
+- A funcionalidade mais importante do $\LaTeX$ são as fórmulas, que podem ser incorporadas em qualquer documento RMarkdown.
+:::
+
+## Como usar fórmulas em $\LaTeX$ no RMarkdown
+
+```r
+$$E=mc^{2}$$
+```
+$$E=mc^{2}$$
+```r
+$$\sqrt{x}$$
+```
+$$\sqrt{x}$$
+
+```r
+$$\frac{a}{b}$$
+```
+$$\frac{a}{b}$$
+
+## Como usar fórmulas em $\LaTeX$ no RMarkdown
+
+```r
+$$x'=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$$
+```
+$$x'=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$$
+
+
+
+Existem ferramentas online para criar fórmulas pelo $\LaTeX$. A mais interessante é o ***[latexeditor](https://latexeditor.lagrida.com)***. Basta criar a fórmula visualmente e transferir para o RStudio.

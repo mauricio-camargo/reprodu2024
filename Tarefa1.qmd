@@ -1,0 +1,15 @@
+---
+title: "Tarefa 1"
+format: html
+editor: visual
+engine: knitr
+---
+
+Cada um deve criar um site, seguindo este [tutorial](Integrar_Git_RStudio.html). Qualquer conteúdo serve, desde as páginas contenham:  
+
+- pelo menos três páginas
+- Links entre estas páginas
+- Links externos
+- pelo menos 1 imagem
+- pelo menos uma tabela e um gráfico do R, inserido com chunk
+- uma fórmula

@@ -1,0 +1,87 @@
+---
+title: "Disciplina de Reprodutilibidade científica no R - Turma 2024"
+lang: pt
+format: html
+
+---
+
+:::{.callout-note}
+Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB` e outros programas de PG da FURG, a partir do site do prof. [Maurício Camargo](https://mauricio-camargo.github.io/).  
+:::
+
+
+# Aulas
+
+[AULA 1: Introdução à reprodutibilidade científica.](Aula1.html)
+
+
+<!--
+## Sites dos alunos construídos com Quarto e revealjs dentro do RStudio usando o Github:
+
+- [Bruno](https://blinhares94.github.io/repr_furg/)
+- [Josiana](https://josianamm.github.io/Reprodutibilidade/)
+- [Letícia](https://dentinho09.github.io/reprod_aula/)
+- [Marybeth](https://marybethcostilla.github.io/again/)
+- [Rosana](https://rosanacosta1995.github.io/air_pollution/)
+---
+-->
+
+
+## Tutoriais de RMarkdown, Quarto, Git e Github.
+
+::: aside
+Estes tutoriais estão em constante aprimoramento, incorporando regularmente novos aprendizados e atualizações.
+:::
+
+
+[Tutorial de integração entre RStudio e Github](https://mauricio-camargo.github.io/r-eutilizaveis/tutorial_integrar_github_rstudio.html)
+
+Os demais tutorais estão atualmente [nesta página](https://mauricio-camargo.github.io/r-eutilizaveis.html).
+
+<!--
+# Tutoriais
+
+[Tutorial instação do RStudio e Git](Integrar_Git_RStudio.html)  
+[Tutorial do Quarto - sempre em evolução](Tutorial_Quarto.html)  
+[Página de exemplo do Quarto](Pagina_Exemplo.html)
+[]()
+
+---
+::: aside
+O site pode ser clonado do Github para o RStudio. Entre no repositório do site no Github e clique em "clonar".
+:::
+
+-->
+
+## Código deste site
+
+[github.com/mauricio-camargo](https://github.com/mauricio-camargo/reprodu2023)
+
+<!-- 
+
+# Aulas e apresentações
+
+::: aside
+As aulas são atualizadas eventualmente.
+:::
+
+[Aula inicial](Aula1.html)  
+[Aula $\LaTeX$](Aula_Latex.html)  
+
+---
+-->
+
+
+<!--
+# Tarefas
+
+::: aside
+As tarefas serão verificadas durante as aulas.
+:::
+
+[Tarefa 1](Tarefa1.html)  
+[Tarefa 2](Tarefa2.html)  
+[Tarefa 3](Tarefa3.html)  
+[Tarefa 4](Tarefa4.html)  
+-->
+
