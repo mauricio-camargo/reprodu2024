@@ -14,6 +14,9 @@ Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB
 
 [AULA 1: Introdução à reprodutibilidade científica.](Aula1.html)
 
+[AULA 2: Instalção das ferramentas (R, RStudio, Quarto, git e Github)](https://mauricio-camargo.github.io/r-eutilizaveis/tutorial_integrar_github_rstudio.html) 
+
+AULA 3 (próxima): Linguagens de marcação: .md, .rmd, .html e .tex
 
 <!--
 ## Sites dos alunos construídos com Quarto e revealjs dentro do RStudio usando o Github:
@@ -27,6 +30,7 @@ Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB
 -->
 
 
+<!--
 ## Tutoriais de RMarkdown, Quarto, Git e Github.
 
 ::: aside
@@ -38,7 +42,6 @@ Estes tutoriais estão em constante aprimoramento, incorporando regularmente nov
 
 Os demais tutorais estão atualmente [nesta página](https://mauricio-camargo.github.io/r-eutilizaveis.html).
 
-<!--
 # Tutoriais
 
 [Tutorial instação do RStudio e Git](Integrar_Git_RStudio.html)  
@@ -52,6 +55,7 @@ O site pode ser clonado do Github para o RStudio. Entre no repositório do site 
 :::
 
 -->
+
 
 ## Código deste site
 
