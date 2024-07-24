@@ -1,0 +1,235 @@
+---
+title: "Reprodutibilidade científica"
+subtitle: "Como fazer ciência reproduzível no R"
+author: "Prof. Maurício Garcia de Camargo"
+institute: "Instituto de Oceanografia - FURG" 
+date: "`r Sys.Date()`" #Para funcionar tem que ter o `r Sys.Date()` em qualquer lugar do corpo (atualmente está no footer do primeiro slide)
+lang: pt-br
+title-slide-attributes:
+  data-background-color: "#6b5a59"
+format: 
+  revealjs:
+    #Veja outros temas em https://quarto.org/docs/presentations/revealjs/themes.html
+    theme: [serif, MeuCustom.scss]
+    logo: images/furg4.png
+#    footer: "`Reprodutibilidade científica`"
+    slide-number: true
+    chalkboard: true #Muito bom para aula
+#    multiplex: false #Os alunos podem seguir com smartfone. ToDo.
+#    show-slide-number: all
+    controls: true #Não é menu. ToDo.
+#    css: [assets/sydney.css, assets/sydney-fonts.css]
+    #Sem estes css o :::box não funciona
+    css: [assets/syntax-highlight.css,assets/sydney.css, assets/custom.css,assets/sydney-fonts.css]
+
+---
+
+## Resumo da aula de hoje
+
+<br><br>
+
+::: box
+- Momento 1: O R e eu! (depois vocês...)  
+- Momento 2: Por que reprodutibilidade?  
+- Momento 3: Conceitos básicos.
+- Momento 4: Elocubrações filosóficas (preview).
+- Momento 5: Instalação e atualização dos softwares.
+:::
+
+::: footer
+```{r}
+# Fake: serve só para que a data apareça no primeiro slide
+ss=Sys.Date()
+```
+:::
+
+## Momento 1: O R e eu! {.smaller} 
+
+::: incremental
+-   1986-1990: Oceanólogo!
+-   1991-2000: Mestrados e doutorado. Início  no programa Statistica!
+-   2001-2004: Início do docência no CEM... Tudo no Statistica!
+-   2004: Descoberta do R!
+-   2005: Início da docência no R.
+-   2006-2010: Divulgação massiva do R.
+-   2011: Criação do pacote GAD.
+-   2013: Criação do pacote rysgran.
+-   2014: Início da Criação do pacote permanovaR.
+
+<br>
+
+::: fragment
+**Agora vocês!**
+:::
+:::
+
+## Momento 2: A descoberta da programação literária (Knuth).
+
+::: incremental
+-   2012: Primeiro contato com RMarkdown (demonstrar).
+-   2013-2020: Uso intenso do RMarkdown (e divulgação).
+-   2022: Primeiro contato com Quarto.
+
+- ![](images/R-Md.png){width=40%}
+
+-   2023: Primeiro curso usando Quarto.
+:::
+
+
+## Momento 3: Conceitos básicos {.smaller}
+
+<br><br>
+
+::: fragment
+**- O que é Reprodutibilidade?**  
+::: 
+
+::: fragment
+> É a qualidade que torna algo passível de ser reproduzido (repetido) em todos os detalhes.
+:::
+
+<br><br>
+
+::: fragment
+**- O que é reprodutibilidade científica?**  
+:::
+
+::: fragment
+> É a capacidade de um estudo científico ser reproduzido em todos os passos por outros cientistas para produzir os mesmos resultados. É um dos pilares do *método científico*, que diferencia o que é *ciência* do que não é ciência (*pseudociência*). 
+:::
+
+## Momento 3: Etapas da reprodutibilidade {.smaller}
+
+<br>
+
+![](images/inic_bras_rep.png)
+
+
+
+## Momento 3: Por que tornar reproduzível? {.smaller}
+
+<br>
+
+![](images/Textos.png)
+
+
+## Momento 4: Elocubrações filosóficas
+
+<br>
+
+**- O que é ciência?**  
+
+::: fragment
+**- O que é o método científico?**  
+:::
+
+::: fragment
+**- Como evoluiu a ciência ao longo da história da humanidade?**
+:::
+
+<br>
+
+::: fragment
+::: info-box
+A seguir
+...
+:::
+:::
+
+<br>
+
+::: {.fragment .box}
+::: {.increment}
+- Histórico do incremento do conhecimento humano
+- Desenvolvimento do método científico
+- Os pilares da ciência e os critérios de reprodutibilidade de Popper.
+:::
+:::
+
+---
+
+## Momento 5. Ferramentas de reprodutibilidade: {.smaller}
+
+<br><br>
+
+::: columns
+::: {.column width="50%"}
+
+::: box
+-   Linguagens
+    -   R
+    -   Python
+    -   HTML
+    -   JavaScript (JS)
+    -   Markdown
+:::
+
+::: box
+-   Framework de reprodutibilidade
+    -   RMarkdown
+    -   Quarto
+
+:::
+:::
+
+::: {.column width="50%"}
+
+::: box
+-   IDE
+    -   RStudio
+    -   VScode
+:::    
+
+::: box
+-   Bibliotecas JS
+    -   revealjs
+    -   mermaid
+:::    
+
+::: box
+-   Repositórios e versionamento
+    -   Github
+    -   Bitbucket
+:::    
+
+:::
+:::
+
+<!-- ::: {layout-ncol="2"} -->
+
+
+## Momento 5: Instalações e atualizações de softwares{.smaller}
+
+<br><br>
+
+:::: {.columns}
+::: {.column width="50%"}
+::: box
+-   Instalações e atualizações
+    -   R (procurar por CRAN)
+    -   RStudio (rstudio.com)
+    -   Quarto (quarto.org)
+    -   Pacotes do RStudio (sob demanda)
+:::
+:::
+
+::: {.column width="50%"}
+::: box
+- Testar a criação de:
+    - HTML 
+    - apresentação
+    - PDF
+    - DOC
+:::
+:::
+:::
+
+<br><br>
+
+[Tutorial de integração entre RStudio e Github](https://mauricio-camargo.github.io/r-eutilizaveis/tutorial_integrar_github_rstudio.html)
+
+
+<!-- wdfwerwer werwerwer werwer -->
+
+
+
