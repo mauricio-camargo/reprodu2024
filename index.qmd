@@ -16,7 +16,7 @@ Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB
 
 [AULA 2: Instalação das ferramentas (R, RStudio, Quarto, git e Github)](https://mauricio-camargo.github.io/r-eutilizaveis/tutorial_integrar_github_rstudio.html) 
 
-AULA 3 (próxima): Linguagens de marcação: .md, .rmd, .html e .tex
+AULA 3:: [Linguagens de marcação: .md, .rmd, .html e .tex](AulaMarkupLang.html)
 
 <!--
 ## Sites dos alunos construídos com Quarto e revealjs dentro do RStudio usando o Github:
