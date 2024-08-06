@@ -43,8 +43,8 @@ format:
 
 ::: footer
 ```{r}
-# Fake: serve só para que a data apareça no primeiro slide
-ss=Sys.Date()
+# Fake: serve só para que a data apareça no primeiro slide -> Parece que não precisa mais.
+# ss=Sys.Date()
 ```
 :::
 
