@@ -21,10 +21,8 @@ Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB
 :::{.callout}
 **TAREFA 1**
 
+A [tarefa 1](Tarefa1.html) deve ser finalizada até o dia 20/08, com todos os arquivos disponíveis no Github. 
 
-Crie uma página HTML usando **RMarkdown** no RStudio que seja uma cópia [desta página](Tarefa1.html).  
-
-Após criar a página, coloque-a no seu Github para que possa ser avaliada.
 :::
 
 <!--
