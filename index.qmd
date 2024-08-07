@@ -22,7 +22,7 @@ Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB
 **TAREFA 1**
 
 
-Crie uma página HTML usando **RMarkdown** no RStudio que seja uma cópia [desta página](tarefa1.html).  
+Crie uma página HTML usando **RMarkdown** no RStudio que seja uma cópia [desta página](Tarefa1.html).  
 
 Após criar a página, coloque-a no seu Github para que possa ser avaliada.
 :::
