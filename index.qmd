@@ -18,6 +18,9 @@ Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB
 
 [AULA 3: Linguagens de marcação: .md, .rmd, .html e .tex](AulaMarkupLang.html)
 
+[AULA 4: Tutorial do Quarto](Tutorial_Quarto.html)
+
+
 :::{.callout}
 **TAREFA 1**
 

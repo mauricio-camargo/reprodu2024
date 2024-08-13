@@ -23,7 +23,7 @@ execute:
 git add -A && git commit -m "staging all files"
 ```
 
-## Formatação básica 
+## Formatação básica
 
 #### Comentários no Quarto
 ``` r
