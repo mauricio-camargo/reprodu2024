@@ -1,8 +1,12 @@
+```{r echo=F}
+current_date <- format(Sys.Date(), "%d/%b/%Y")
+```
+
 ---
 title: "Mini-tutorial do Quarto no RStudio"
 lang: pt-br
 author: "Maurício Garcia de Camargo"
-date: "`r Sys.Date()`"
+date: "`r current_date`"
 toc: true
 toc-depth: 4
 toc-location: left
@@ -16,6 +20,7 @@ format:
 execute:
   warning: false
 ---
+
 
 ## Linha mágica para commit
 

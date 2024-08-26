@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
+      <p class="date">26/ago/2024</p>
     </div>
   </div>
   
@@ -943,361 +943,366 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Código fonte</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb35" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Mini-tutorial do Quarto no RStudio"</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> pt-br</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Maurício Garcia de Camargo"</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "`r Sys.Date()`"</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="an">toc-depth:</span><span class="co"> 4</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="an">toc-location:</span><span class="co"> left</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: default</span></span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="co">    html-math-method: katex</span></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-line-numbers: false</span></span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="co">    self-contained: false</span></span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Linha mágica para commit</span></span>
-<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>git add <span class="sc">-</span>A <span class="sc">&amp;&amp;</span> git commit <span class="sc">-</span>m <span class="st">"staging all files"</span></span>
-<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Formatação básica</span></span>
-<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Comentários no Quarto</span></span>
-<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;!--</span> Aqui vai o comentário <span class="sc">-</span><span class="ot">-&gt;</span></span>
-<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
-<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a>Esse estilo de comentário é herdado do HTML e é uma porcaria. </span>
-<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Novo parágrafo</span></span>
-<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a>Dois espaços no final da linha criam um novo parágrafo</span>
-<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb35" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=F}</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="in">current_date &lt;- format(Sys.Date(), "%d/%b/%Y")</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>title: "Mini-tutorial do Quarto no RStudio"</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>lang: pt-br</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>author: "Maurício Garcia de Camargo"</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>date: "<span class="in">`r current_date`</span>"</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>toc: true</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>toc-depth: 4</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>toc-location: left</span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>format:</span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>  html:</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>    theme: default</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>    html-math-method: katex</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>    code-tools: true</span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>    code-line-numbers: false</span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>    self-contained: false</span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>execute:</span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>  warning: false</span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Linha mágica para commit</span></span>
+<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>git add <span class="sc">-</span>A <span class="sc">&amp;&amp;</span> git commit <span class="sc">-</span>m <span class="st">"staging all files"</span></span>
+<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Formatação básica</span></span>
+<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Comentários no Quarto</span></span>
+<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;!--</span> Aqui vai o comentário <span class="sc">-</span><span class="ot">-&gt;</span></span>
+<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a>Esse estilo de comentário é herdado do HTML e é uma porcaria. </span>
+<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
-<span id="cb35-42"><a href="#cb35-42" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;br&gt;`</span> vem do HTML e também cria um parágrafo. </span>
-<span id="cb35-43"><a href="#cb35-43" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-44"><a href="#cb35-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-45"><a href="#cb35-45" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Texto:</span></span>
-<span id="cb35-46"><a href="#cb35-46" aria-hidden="true" tabindex="-1"></a><span class="in">```r </span></span>
-<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>Itálico<span class="sc">*</span></span>
-<span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a><span class="er">**</span>Negrito<span class="sc">**</span></span>
-<span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a><span class="er">***</span>Negrito e itálico<span class="sc">**</span><span class="er">*</span></span>
-<span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a>superscript<span class="sc">^</span><span class="dv">2</span><span class="sc">^</span> <span class="er">/</span> subscript<span class="sc">~</span><span class="dv">2</span><span class="sc">~</span></span>
-<span id="cb35-51"><a href="#cb35-51" aria-hidden="true" tabindex="-1"></a><span class="er">~~</span>strikethrough<span class="sc">~</span><span class="er">~</span></span>
-<span id="cb35-52"><a href="#cb35-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-53"><a href="#cb35-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-54"><a href="#cb35-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cabeçalhos</span></span>
-<span id="cb35-55"><a href="#cb35-55" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-56"><a href="#cb35-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Header 1</span></span>
-<span id="cb35-57"><a href="#cb35-57" aria-hidden="true" tabindex="-1"></a><span class="do">## Header 2</span></span>
-<span id="cb35-58"><a href="#cb35-58" aria-hidden="true" tabindex="-1"></a><span class="do">## Header 3</span></span>
-<span id="cb35-59"><a href="#cb35-59" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb35-60"><a href="#cb35-60" aria-hidden="true" tabindex="-1"></a><span class="do">###### Header 6</span></span>
-<span id="cb35-61"><a href="#cb35-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-62"><a href="#cb35-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-63"><a href="#cb35-63" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
-<span id="cb35-64"><a href="#cb35-64" aria-hidden="true" tabindex="-1"></a>Existem várias opções do revealjs para headers. Ver depois.</span>
-<span id="cb35-65"><a href="#cb35-65" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-66"><a href="#cb35-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-67"><a href="#cb35-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## Links e imagens:</span></span>
-<span id="cb35-68"><a href="#cb35-68" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-69"><a href="#cb35-69" aria-hidden="true" tabindex="-1"></a>[Quarto](https<span class="sc">:</span><span class="er">//</span>quarto.org) <span class="co">#Link</span></span>
-<span id="cb35-70"><a href="#cb35-70" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Elefante](elephant.png)    <span class="co">#Imagem</span></span>
-<span id="cb35-71"><a href="#cb35-71" aria-hidden="true" tabindex="-1"></a>[<span class="sc">!</span>[Elefante](elephant.png)](https<span class="sc">:</span><span class="er">//</span>quarto.org) <span class="co">#Link de Imagem</span></span>
-<span id="cb35-72"><a href="#cb35-72" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Elephant](elephant.png){width<span class="ot">=</span><span class="dv">300</span>}</span>
-<span id="cb35-73"><a href="#cb35-73" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Elephant](elephant.png){width<span class="ot">=</span><span class="dv">80</span>%}</span>
-<span id="cb35-74"><a href="#cb35-74" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Elephant](elephant.png){fig<span class="sc">-</span>align<span class="ot">=</span><span class="st">"left"</span>}</span>
-<span id="cb35-75"><a href="#cb35-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-76"><a href="#cb35-76" aria-hidden="true" tabindex="-1"></a>Posição absoluta<span class="sc">:</span></span>
-<span id="cb35-77"><a href="#cb35-77" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[](image1.png){.absolute top<span class="ot">=</span><span class="dv">200</span> left<span class="ot">=</span><span class="dv">0</span> width<span class="ot">=</span><span class="st">"350"</span> height<span class="ot">=</span><span class="st">"300"</span>}</span>
-<span id="cb35-78"><a href="#cb35-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-79"><a href="#cb35-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-80"><a href="#cb35-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## Literais</span></span>
-<span id="cb35-81"><a href="#cb35-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-82"><a href="#cb35-82" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Literais em uma linha entre crases:</span></span>
-<span id="cb35-83"><a href="#cb35-83" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-84"><a href="#cb35-84" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">aqui vai literal</span><span class="st">`</span></span>
-<span id="cb35-85"><a href="#cb35-85" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Novo parágrafo</span></span>
+<span id="cb35-42"><a href="#cb35-42" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-43"><a href="#cb35-43" aria-hidden="true" tabindex="-1"></a>Dois espaços no final da linha criam um novo parágrafo</span>
+<span id="cb35-44"><a href="#cb35-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-45"><a href="#cb35-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-46"><a href="#cb35-46" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;br&gt;`</span> vem do HTML e também cria um parágrafo. </span>
+<span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Texto:</span></span>
+<span id="cb35-51"><a href="#cb35-51" aria-hidden="true" tabindex="-1"></a><span class="in">```r </span></span>
+<span id="cb35-52"><a href="#cb35-52" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>Itálico<span class="sc">*</span></span>
+<span id="cb35-53"><a href="#cb35-53" aria-hidden="true" tabindex="-1"></a><span class="er">**</span>Negrito<span class="sc">**</span></span>
+<span id="cb35-54"><a href="#cb35-54" aria-hidden="true" tabindex="-1"></a><span class="er">***</span>Negrito e itálico<span class="sc">**</span><span class="er">*</span></span>
+<span id="cb35-55"><a href="#cb35-55" aria-hidden="true" tabindex="-1"></a>superscript<span class="sc">^</span><span class="dv">2</span><span class="sc">^</span> <span class="er">/</span> subscript<span class="sc">~</span><span class="dv">2</span><span class="sc">~</span></span>
+<span id="cb35-56"><a href="#cb35-56" aria-hidden="true" tabindex="-1"></a><span class="er">~~</span>strikethrough<span class="sc">~</span><span class="er">~</span></span>
+<span id="cb35-57"><a href="#cb35-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-58"><a href="#cb35-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-59"><a href="#cb35-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cabeçalhos</span></span>
+<span id="cb35-60"><a href="#cb35-60" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-61"><a href="#cb35-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Header 1</span></span>
+<span id="cb35-62"><a href="#cb35-62" aria-hidden="true" tabindex="-1"></a><span class="do">## Header 2</span></span>
+<span id="cb35-63"><a href="#cb35-63" aria-hidden="true" tabindex="-1"></a><span class="do">## Header 3</span></span>
+<span id="cb35-64"><a href="#cb35-64" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb35-65"><a href="#cb35-65" aria-hidden="true" tabindex="-1"></a><span class="do">###### Header 6</span></span>
+<span id="cb35-66"><a href="#cb35-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-67"><a href="#cb35-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-68"><a href="#cb35-68" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb35-69"><a href="#cb35-69" aria-hidden="true" tabindex="-1"></a>Existem várias opções do revealjs para headers. Ver depois.</span>
+<span id="cb35-70"><a href="#cb35-70" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-71"><a href="#cb35-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-72"><a href="#cb35-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## Links e imagens:</span></span>
+<span id="cb35-73"><a href="#cb35-73" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-74"><a href="#cb35-74" aria-hidden="true" tabindex="-1"></a>[Quarto](https<span class="sc">:</span><span class="er">//</span>quarto.org) <span class="co">#Link</span></span>
+<span id="cb35-75"><a href="#cb35-75" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Elefante](elephant.png)    <span class="co">#Imagem</span></span>
+<span id="cb35-76"><a href="#cb35-76" aria-hidden="true" tabindex="-1"></a>[<span class="sc">!</span>[Elefante](elephant.png)](https<span class="sc">:</span><span class="er">//</span>quarto.org) <span class="co">#Link de Imagem</span></span>
+<span id="cb35-77"><a href="#cb35-77" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Elephant](elephant.png){width<span class="ot">=</span><span class="dv">300</span>}</span>
+<span id="cb35-78"><a href="#cb35-78" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Elephant](elephant.png){width<span class="ot">=</span><span class="dv">80</span>%}</span>
+<span id="cb35-79"><a href="#cb35-79" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Elephant](elephant.png){fig<span class="sc">-</span>align<span class="ot">=</span><span class="st">"left"</span>}</span>
+<span id="cb35-80"><a href="#cb35-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-81"><a href="#cb35-81" aria-hidden="true" tabindex="-1"></a>Posição absoluta<span class="sc">:</span></span>
+<span id="cb35-82"><a href="#cb35-82" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[](image1.png){.absolute top<span class="ot">=</span><span class="dv">200</span> left<span class="ot">=</span><span class="dv">0</span> width<span class="ot">=</span><span class="st">"350"</span> height<span class="ot">=</span><span class="st">"300"</span>}</span>
+<span id="cb35-83"><a href="#cb35-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-84"><a href="#cb35-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-85"><a href="#cb35-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Literais</span></span>
 <span id="cb35-86"><a href="#cb35-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-87"><a href="#cb35-87" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Literais em mais de uma linha:</span></span>
-<span id="cb35-88"><a href="#cb35-88" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-89"><a href="#cb35-89" aria-hidden="true" tabindex="-1"></a>Coloque <span class="dv">4</span> <span class="fu">crases</span> (<span class="st">````</span>) no início e no final do texto. </span>
+<span id="cb35-87"><a href="#cb35-87" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Literais em uma linha entre crases:</span></span>
+<span id="cb35-88"><a href="#cb35-88" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-89"><a href="#cb35-89" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">aqui vai literal</span><span class="st">`</span></span>
 <span id="cb35-90"><a href="#cb35-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb35-91"><a href="#cb35-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-92"><a href="#cb35-92" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
-<span id="cb35-93"><a href="#cb35-93" aria-hidden="true" tabindex="-1"></a>Às vezes dá um resultado meio bizarro. Coisa chata.</span>
-<span id="cb35-94"><a href="#cb35-94" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-95"><a href="#cb35-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-96"><a href="#cb35-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Listas</span></span>
-<span id="cb35-97"><a href="#cb35-97" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-98"><a href="#cb35-98" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> unordered list</span>
-<span id="cb35-99"><a href="#cb35-99" aria-hidden="true" tabindex="-1"></a>    <span class="sc">+</span> sub<span class="sc">-</span>item <span class="dv">1</span></span>
-<span id="cb35-100"><a href="#cb35-100" aria-hidden="true" tabindex="-1"></a>    <span class="sc">+</span> sub<span class="sc">-</span>item <span class="dv">2</span></span>
-<span id="cb35-101"><a href="#cb35-101" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> sub<span class="sc">-</span>sub<span class="sc">-</span>item <span class="dv">1</span></span>
-<span id="cb35-102"><a href="#cb35-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-103"><a href="#cb35-103" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> ordered list</span>
-<span id="cb35-104"><a href="#cb35-104" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> item <span class="dv">2</span></span>
-<span id="cb35-105"><a href="#cb35-105" aria-hidden="true" tabindex="-1"></a>    i<span class="er">)</span> sub<span class="sc">-</span>item <span class="dv">1</span></span>
-<span id="cb35-106"><a href="#cb35-106" aria-hidden="true" tabindex="-1"></a>         A.  sub<span class="sc">-</span>sub<span class="sc">-</span>item <span class="dv">1</span></span>
-<span id="cb35-107"><a href="#cb35-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-108"><a href="#cb35-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-109"><a href="#cb35-109" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tabelas</span></span>
-<span id="cb35-110"><a href="#cb35-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-111"><a href="#cb35-111" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Tabelas simples</span></span>
-<span id="cb35-112"><a href="#cb35-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-113"><a href="#cb35-113" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-114"><a href="#cb35-114" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span> Right <span class="sc">|</span> Left <span class="sc">|</span> Default <span class="sc">|</span> Center <span class="sc">|</span></span>
-<span id="cb35-115"><a href="#cb35-115" aria-hidden="true" tabindex="-1"></a><span class="er">|</span><span class="sc">------</span><span class="er">:|:</span><span class="sc">-----</span><span class="er">|</span><span class="sc">---------</span><span class="er">|:</span><span class="sc">------</span><span class="er">:|</span></span>
-<span id="cb35-116"><a href="#cb35-116" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>  <span class="dv">12</span>   <span class="sc">|</span>  <span class="dv">12</span>  <span class="sc">|</span>    <span class="dv">12</span>   <span class="sc">|</span>    <span class="dv">12</span>  <span class="sc">|</span></span>
-<span id="cb35-117"><a href="#cb35-117" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>  <span class="dv">123</span>  <span class="sc">|</span>  <span class="dv">123</span> <span class="sc">|</span>   <span class="dv">123</span>   <span class="sc">|</span>   <span class="dv">123</span>  <span class="sc">|</span></span>
-<span id="cb35-118"><a href="#cb35-118" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>  <span class="dv">1</span>    <span class="sc">|</span>    <span class="dv">1</span> <span class="sc">|</span>     <span class="dv">1</span>   <span class="sc">|</span>     <span class="dv">1</span>  <span class="sc">|</span></span>
-<span id="cb35-119"><a href="#cb35-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-120"><a href="#cb35-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-121"><a href="#cb35-121" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Tabelas com grid </span></span>
-<span id="cb35-122"><a href="#cb35-122" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-123"><a href="#cb35-123" aria-hidden="true" tabindex="-1"></a><span class="sc">+---------------+---------------+--------------------+</span></span>
-<span id="cb35-124"><a href="#cb35-124" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Fruit         <span class="sc">|</span> Price         <span class="sc">|</span> Advantages         <span class="sc">|</span></span>
-<span id="cb35-125"><a href="#cb35-125" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span><span class="er">===============</span><span class="sc">+</span><span class="er">===============</span><span class="sc">+</span><span class="er">====================</span><span class="sc">+</span></span>
-<span id="cb35-126"><a href="#cb35-126" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Bananas       <span class="sc">|</span> <span class="er">$</span><span class="fl">1.34</span>         <span class="sc">|</span> <span class="sc">-</span> built<span class="sc">-</span><span class="cf">in</span> wrapper <span class="sc">|</span></span>
-<span id="cb35-127"><a href="#cb35-127" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>               <span class="er">|</span>               <span class="er">|</span> <span class="sc">-</span> bright color     <span class="sc">|</span></span>
+<span id="cb35-92"><a href="#cb35-92" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Literais em mais de uma linha:</span></span>
+<span id="cb35-93"><a href="#cb35-93" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-94"><a href="#cb35-94" aria-hidden="true" tabindex="-1"></a>Coloque <span class="dv">4</span> <span class="fu">crases</span> (<span class="st">````</span>) no início e no final do texto. </span>
+<span id="cb35-95"><a href="#cb35-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-96"><a href="#cb35-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-97"><a href="#cb35-97" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb35-98"><a href="#cb35-98" aria-hidden="true" tabindex="-1"></a>Às vezes dá um resultado meio bizarro. Coisa chata.</span>
+<span id="cb35-99"><a href="#cb35-99" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-100"><a href="#cb35-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-101"><a href="#cb35-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Listas</span></span>
+<span id="cb35-102"><a href="#cb35-102" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-103"><a href="#cb35-103" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> unordered list</span>
+<span id="cb35-104"><a href="#cb35-104" aria-hidden="true" tabindex="-1"></a>    <span class="sc">+</span> sub<span class="sc">-</span>item <span class="dv">1</span></span>
+<span id="cb35-105"><a href="#cb35-105" aria-hidden="true" tabindex="-1"></a>    <span class="sc">+</span> sub<span class="sc">-</span>item <span class="dv">2</span></span>
+<span id="cb35-106"><a href="#cb35-106" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> sub<span class="sc">-</span>sub<span class="sc">-</span>item <span class="dv">1</span></span>
+<span id="cb35-107"><a href="#cb35-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-108"><a href="#cb35-108" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> ordered list</span>
+<span id="cb35-109"><a href="#cb35-109" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> item <span class="dv">2</span></span>
+<span id="cb35-110"><a href="#cb35-110" aria-hidden="true" tabindex="-1"></a>    i<span class="er">)</span> sub<span class="sc">-</span>item <span class="dv">1</span></span>
+<span id="cb35-111"><a href="#cb35-111" aria-hidden="true" tabindex="-1"></a>         A.  sub<span class="sc">-</span>sub<span class="sc">-</span>item <span class="dv">1</span></span>
+<span id="cb35-112"><a href="#cb35-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-113"><a href="#cb35-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-114"><a href="#cb35-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tabelas</span></span>
+<span id="cb35-115"><a href="#cb35-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-116"><a href="#cb35-116" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Tabelas simples</span></span>
+<span id="cb35-117"><a href="#cb35-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-118"><a href="#cb35-118" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-119"><a href="#cb35-119" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span> Right <span class="sc">|</span> Left <span class="sc">|</span> Default <span class="sc">|</span> Center <span class="sc">|</span></span>
+<span id="cb35-120"><a href="#cb35-120" aria-hidden="true" tabindex="-1"></a><span class="er">|</span><span class="sc">------</span><span class="er">:|:</span><span class="sc">-----</span><span class="er">|</span><span class="sc">---------</span><span class="er">|:</span><span class="sc">------</span><span class="er">:|</span></span>
+<span id="cb35-121"><a href="#cb35-121" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>  <span class="dv">12</span>   <span class="sc">|</span>  <span class="dv">12</span>  <span class="sc">|</span>    <span class="dv">12</span>   <span class="sc">|</span>    <span class="dv">12</span>  <span class="sc">|</span></span>
+<span id="cb35-122"><a href="#cb35-122" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>  <span class="dv">123</span>  <span class="sc">|</span>  <span class="dv">123</span> <span class="sc">|</span>   <span class="dv">123</span>   <span class="sc">|</span>   <span class="dv">123</span>  <span class="sc">|</span></span>
+<span id="cb35-123"><a href="#cb35-123" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>  <span class="dv">1</span>    <span class="sc">|</span>    <span class="dv">1</span> <span class="sc">|</span>     <span class="dv">1</span>   <span class="sc">|</span>     <span class="dv">1</span>  <span class="sc">|</span></span>
+<span id="cb35-124"><a href="#cb35-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-125"><a href="#cb35-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-126"><a href="#cb35-126" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Tabelas com grid </span></span>
+<span id="cb35-127"><a href="#cb35-127" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
 <span id="cb35-128"><a href="#cb35-128" aria-hidden="true" tabindex="-1"></a><span class="sc">+---------------+---------------+--------------------+</span></span>
-<span id="cb35-129"><a href="#cb35-129" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Oranges       <span class="sc">|</span> <span class="er">$</span><span class="fl">2.10</span>         <span class="sc">|</span> <span class="sc">-</span> cures scurvy     <span class="sc">|</span></span>
-<span id="cb35-130"><a href="#cb35-130" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>               <span class="er">|</span>               <span class="er">|</span> <span class="sc">-</span> tasty            <span class="sc">|</span></span>
-<span id="cb35-131"><a href="#cb35-131" aria-hidden="true" tabindex="-1"></a><span class="sc">+---------------+---------------+--------------------+</span></span>
-<span id="cb35-132"><a href="#cb35-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-133"><a href="#cb35-133" aria-hidden="true" tabindex="-1"></a><span class="er">:</span> Sample grid table.</span>
-<span id="cb35-134"><a href="#cb35-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-135"><a href="#cb35-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-136"><a href="#cb35-136" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
-<span id="cb35-137"><a href="#cb35-137" aria-hidden="true" tabindex="-1"></a>Existem outras opções de tabelas. Esta é a mais simples.</span>
-<span id="cb35-138"><a href="#cb35-138" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-139"><a href="#cb35-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-140"><a href="#cb35-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fórmulas</span></span>
-<span id="cb35-141"><a href="#cb35-141" aria-hidden="true" tabindex="-1"></a><span class="in">````r</span></span>
-<span id="cb35-142"><a href="#cb35-142" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>E <span class="ot">=</span> mc<span class="sc">^</span>{<span class="dv">2</span>}<span class="sc">$</span> para inline</span>
-<span id="cb35-143"><a href="#cb35-143" aria-hidden="true" tabindex="-1"></a>ou</span>
-<span id="cb35-144"><a href="#cb35-144" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span><span class="er">$</span>E <span class="ot">=</span> mc<span class="sc">^</span>{<span class="dv">2</span>}<span class="sc">$</span><span class="er">$</span> para centro da linha</span>
-<span id="cb35-145"><a href="#cb35-145" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb35-146"><a href="#cb35-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-147"><a href="#cb35-147" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
-<span id="cb35-148"><a href="#cb35-148" aria-hidden="true" tabindex="-1"></a>Estas são fórmulas do Markdown. Para fórmulas mais complexas, existe o LaTeX.</span>
-<span id="cb35-149"><a href="#cb35-149" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-150"><a href="#cb35-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-151"><a href="#cb35-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## Notas de margem</span></span>
-<span id="cb35-152"><a href="#cb35-152" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-153"><a href="#cb35-153" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column<span class="sc">-</span>margin}</span>
-<span id="cb35-154"><a href="#cb35-154" aria-hidden="true" tabindex="-1"></a>We know from <span class="sc">*</span>the first fundamental theorem of calculus<span class="sc">*</span> </span>
-<span id="cb35-155"><a href="#cb35-155" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
-<span id="cb35-156"><a href="#cb35-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-157"><a href="#cb35-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-158"><a href="#cb35-158" aria-hidden="true" tabindex="-1"></a><span class="fu">## Diagramas</span></span>
-<span id="cb35-159"><a href="#cb35-159" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-160"><a href="#cb35-160" aria-hidden="true" tabindex="-1"></a>{mermaid}</span>
-<span id="cb35-161"><a href="#cb35-161" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
-<span id="cb35-162"><a href="#cb35-162" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] <span class="sc">-</span><span class="ot">-&gt;</span> <span class="fu">B</span>(Round edge)</span>
-<span id="cb35-163"><a href="#cb35-163" aria-hidden="true" tabindex="-1"></a>  B <span class="sc">-</span><span class="ot">-&gt;</span> C{Decision}</span>
-<span id="cb35-164"><a href="#cb35-164" aria-hidden="true" tabindex="-1"></a>  C <span class="sc">-</span><span class="ot">-&gt;</span> D[Result one]</span>
-<span id="cb35-165"><a href="#cb35-165" aria-hidden="true" tabindex="-1"></a>  C <span class="sc">-</span><span class="ot">-&gt;</span> E[Result two]</span>
-<span id="cb35-166"><a href="#cb35-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-167"><a href="#cb35-167" aria-hidden="true" tabindex="-1"></a>Veja em mermaid.js.org</span>
-<span id="cb35-168"><a href="#cb35-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-169"><a href="#cb35-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-170"><a href="#cb35-170" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
-<span id="cb35-171"><a href="#cb35-171" aria-hidden="true" tabindex="-1"></a>Mermaid é uma biblioteca JS para criar diagramas online baseado numa linguagem específica. </span>
-<span id="cb35-172"><a href="#cb35-172" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-173"><a href="#cb35-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-174"><a href="#cb35-174" aria-hidden="true" tabindex="-1"></a><span class="fu">## Destaque de textos</span></span>
-<span id="cb35-175"><a href="#cb35-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-176"><a href="#cb35-176" aria-hidden="true" tabindex="-1"></a><span class="fu">#### callout (avisos)</span></span>
-<span id="cb35-177"><a href="#cb35-177" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-178"><a href="#cb35-178" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.callout<span class="sc">-</span>note}</span>
-<span id="cb35-179"><a href="#cb35-179" aria-hidden="true" tabindex="-1"></a>Note that there are five types of callouts, including<span class="sc">:</span> </span>
-<span id="cb35-180"><a href="#cb35-180" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">note</span><span class="st">`</span>, <span class="st">`</span><span class="at">tip</span><span class="st">`</span>, <span class="st">`</span><span class="at">warning</span><span class="st">`</span>, <span class="st">`</span><span class="at">caution</span><span class="st">`</span>, and <span class="st">`</span><span class="at">important</span><span class="st">`</span>.</span>
-<span id="cb35-181"><a href="#cb35-181" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-182"><a href="#cb35-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-183"><a href="#cb35-183" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Blockquote</span></span>
-<span id="cb35-184"><a href="#cb35-184" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-185"><a href="#cb35-185" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> Bloco destacado</span>
-<span id="cb35-186"><a href="#cb35-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-187"><a href="#cb35-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-188"><a href="#cb35-188" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Blockquote mais de uma linha.</span></span>
+<span id="cb35-129"><a href="#cb35-129" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Fruit         <span class="sc">|</span> Price         <span class="sc">|</span> Advantages         <span class="sc">|</span></span>
+<span id="cb35-130"><a href="#cb35-130" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span><span class="er">===============</span><span class="sc">+</span><span class="er">===============</span><span class="sc">+</span><span class="er">====================</span><span class="sc">+</span></span>
+<span id="cb35-131"><a href="#cb35-131" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Bananas       <span class="sc">|</span> <span class="er">$</span><span class="fl">1.34</span>         <span class="sc">|</span> <span class="sc">-</span> built<span class="sc">-</span><span class="cf">in</span> wrapper <span class="sc">|</span></span>
+<span id="cb35-132"><a href="#cb35-132" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>               <span class="er">|</span>               <span class="er">|</span> <span class="sc">-</span> bright color     <span class="sc">|</span></span>
+<span id="cb35-133"><a href="#cb35-133" aria-hidden="true" tabindex="-1"></a><span class="sc">+---------------+---------------+--------------------+</span></span>
+<span id="cb35-134"><a href="#cb35-134" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Oranges       <span class="sc">|</span> <span class="er">$</span><span class="fl">2.10</span>         <span class="sc">|</span> <span class="sc">-</span> cures scurvy     <span class="sc">|</span></span>
+<span id="cb35-135"><a href="#cb35-135" aria-hidden="true" tabindex="-1"></a><span class="er">|</span>               <span class="er">|</span>               <span class="er">|</span> <span class="sc">-</span> tasty            <span class="sc">|</span></span>
+<span id="cb35-136"><a href="#cb35-136" aria-hidden="true" tabindex="-1"></a><span class="sc">+---------------+---------------+--------------------+</span></span>
+<span id="cb35-137"><a href="#cb35-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-138"><a href="#cb35-138" aria-hidden="true" tabindex="-1"></a><span class="er">:</span> Sample grid table.</span>
+<span id="cb35-139"><a href="#cb35-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-140"><a href="#cb35-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-141"><a href="#cb35-141" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb35-142"><a href="#cb35-142" aria-hidden="true" tabindex="-1"></a>Existem outras opções de tabelas. Esta é a mais simples.</span>
+<span id="cb35-143"><a href="#cb35-143" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-144"><a href="#cb35-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-145"><a href="#cb35-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fórmulas</span></span>
+<span id="cb35-146"><a href="#cb35-146" aria-hidden="true" tabindex="-1"></a><span class="in">````r</span></span>
+<span id="cb35-147"><a href="#cb35-147" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>E <span class="ot">=</span> mc<span class="sc">^</span>{<span class="dv">2</span>}<span class="sc">$</span> para inline</span>
+<span id="cb35-148"><a href="#cb35-148" aria-hidden="true" tabindex="-1"></a>ou</span>
+<span id="cb35-149"><a href="#cb35-149" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span><span class="er">$</span>E <span class="ot">=</span> mc<span class="sc">^</span>{<span class="dv">2</span>}<span class="sc">$</span><span class="er">$</span> para centro da linha</span>
+<span id="cb35-150"><a href="#cb35-150" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb35-151"><a href="#cb35-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-152"><a href="#cb35-152" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb35-153"><a href="#cb35-153" aria-hidden="true" tabindex="-1"></a>Estas são fórmulas do Markdown. Para fórmulas mais complexas, existe o LaTeX.</span>
+<span id="cb35-154"><a href="#cb35-154" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-155"><a href="#cb35-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-156"><a href="#cb35-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## Notas de margem</span></span>
+<span id="cb35-157"><a href="#cb35-157" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-158"><a href="#cb35-158" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column<span class="sc">-</span>margin}</span>
+<span id="cb35-159"><a href="#cb35-159" aria-hidden="true" tabindex="-1"></a>We know from <span class="sc">*</span>the first fundamental theorem of calculus<span class="sc">*</span> </span>
+<span id="cb35-160"><a href="#cb35-160" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
+<span id="cb35-161"><a href="#cb35-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-162"><a href="#cb35-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-163"><a href="#cb35-163" aria-hidden="true" tabindex="-1"></a><span class="fu">## Diagramas</span></span>
+<span id="cb35-164"><a href="#cb35-164" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-165"><a href="#cb35-165" aria-hidden="true" tabindex="-1"></a>{mermaid}</span>
+<span id="cb35-166"><a href="#cb35-166" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb35-167"><a href="#cb35-167" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] <span class="sc">-</span><span class="ot">-&gt;</span> <span class="fu">B</span>(Round edge)</span>
+<span id="cb35-168"><a href="#cb35-168" aria-hidden="true" tabindex="-1"></a>  B <span class="sc">-</span><span class="ot">-&gt;</span> C{Decision}</span>
+<span id="cb35-169"><a href="#cb35-169" aria-hidden="true" tabindex="-1"></a>  C <span class="sc">-</span><span class="ot">-&gt;</span> D[Result one]</span>
+<span id="cb35-170"><a href="#cb35-170" aria-hidden="true" tabindex="-1"></a>  C <span class="sc">-</span><span class="ot">-&gt;</span> E[Result two]</span>
+<span id="cb35-171"><a href="#cb35-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-172"><a href="#cb35-172" aria-hidden="true" tabindex="-1"></a>Veja em mermaid.js.org</span>
+<span id="cb35-173"><a href="#cb35-173" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-174"><a href="#cb35-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-175"><a href="#cb35-175" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb35-176"><a href="#cb35-176" aria-hidden="true" tabindex="-1"></a>Mermaid é uma biblioteca JS para criar diagramas online baseado numa linguagem específica. </span>
+<span id="cb35-177"><a href="#cb35-177" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-178"><a href="#cb35-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-179"><a href="#cb35-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## Destaque de textos</span></span>
+<span id="cb35-180"><a href="#cb35-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-181"><a href="#cb35-181" aria-hidden="true" tabindex="-1"></a><span class="fu">#### callout (avisos)</span></span>
+<span id="cb35-182"><a href="#cb35-182" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-183"><a href="#cb35-183" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.callout<span class="sc">-</span>note}</span>
+<span id="cb35-184"><a href="#cb35-184" aria-hidden="true" tabindex="-1"></a>Note that there are five types of callouts, including<span class="sc">:</span> </span>
+<span id="cb35-185"><a href="#cb35-185" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">note</span><span class="st">`</span>, <span class="st">`</span><span class="at">tip</span><span class="st">`</span>, <span class="st">`</span><span class="at">warning</span><span class="st">`</span>, <span class="st">`</span><span class="at">caution</span><span class="st">`</span>, and <span class="st">`</span><span class="at">important</span><span class="st">`</span>.</span>
+<span id="cb35-186"><a href="#cb35-186" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-187"><a href="#cb35-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-188"><a href="#cb35-188" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Blockquote</span></span>
 <span id="cb35-189"><a href="#cb35-189" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-190"><a href="#cb35-190" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span> Line Block</span>
-<span id="cb35-191"><a href="#cb35-191" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span>   Spaces and newlines</span>
-<span id="cb35-192"><a href="#cb35-192" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span>   are preserved</span>
-<span id="cb35-193"><a href="#cb35-193" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-194"><a href="#cb35-194" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
-<span id="cb35-195"><a href="#cb35-195" aria-hidden="true" tabindex="-1"></a>Os espaços e formatação são todos preservados. </span>
-<span id="cb35-196"><a href="#cb35-196" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-197"><a href="#cb35-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-198"><a href="#cb35-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-199"><a href="#cb35-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## Layouts</span></span>
-<span id="cb35-200"><a href="#cb35-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-201"><a href="#cb35-201" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Duas colunas</span></span>
-<span id="cb35-202"><a href="#cb35-202" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-203"><a href="#cb35-203" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {layout<span class="sc">-</span>ncol<span class="ot">=</span><span class="dv">2</span>}</span>
-<span id="cb35-204"><a href="#cb35-204" aria-hidden="true" tabindex="-1"></a>asdasd  </span>
+<span id="cb35-190"><a href="#cb35-190" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> Bloco destacado</span>
+<span id="cb35-191"><a href="#cb35-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-192"><a href="#cb35-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-193"><a href="#cb35-193" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Blockquote mais de uma linha.</span></span>
+<span id="cb35-194"><a href="#cb35-194" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-195"><a href="#cb35-195" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span> Line Block</span>
+<span id="cb35-196"><a href="#cb35-196" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span>   Spaces and newlines</span>
+<span id="cb35-197"><a href="#cb35-197" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span>   are preserved</span>
+<span id="cb35-198"><a href="#cb35-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-199"><a href="#cb35-199" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb35-200"><a href="#cb35-200" aria-hidden="true" tabindex="-1"></a>Os espaços e formatação são todos preservados. </span>
+<span id="cb35-201"><a href="#cb35-201" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-202"><a href="#cb35-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-203"><a href="#cb35-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-204"><a href="#cb35-204" aria-hidden="true" tabindex="-1"></a><span class="fu">## Layouts</span></span>
 <span id="cb35-205"><a href="#cb35-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-206"><a href="#cb35-206" aria-hidden="true" tabindex="-1"></a>asdasd</span>
-<span id="cb35-207"><a href="#cb35-207" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-208"><a href="#cb35-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-209"><a href="#cb35-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-210"><a href="#cb35-210" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Múltiplas colunas</span></span>
-<span id="cb35-211"><a href="#cb35-211" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-212"><a href="#cb35-212" aria-hidden="true" tabindex="-1"></a>Duas linhas, a primeira com <span class="dv">2</span> e a segunda com <span class="dv">1</span> gráfico, todos com o mesmo tamanho.</span>
-<span id="cb35-213"><a href="#cb35-213" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {layout<span class="ot">=</span><span class="st">"[[1,1], [1]]"</span>}</span>
-<span id="cb35-214"><a href="#cb35-214" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Surus](surus.png)</span>
-<span id="cb35-215"><a href="#cb35-215" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Surus1](surus1.png)</span>
-<span id="cb35-216"><a href="#cb35-216" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Surus2](surus2.png)</span>
-<span id="cb35-217"><a href="#cb35-217" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-218"><a href="#cb35-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-219"><a href="#cb35-219" aria-hidden="true" tabindex="-1"></a>Para layout com percentuais<span class="sc">:</span></span>
-<span id="cb35-220"><a href="#cb35-220" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {layout<span class="ot">=</span><span class="st">"[[40,-20,40], [100]]"</span>}</span>
-<span id="cb35-221"><a href="#cb35-221" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-222"><a href="#cb35-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-223"><a href="#cb35-223" aria-hidden="true" tabindex="-1"></a><span class="fu">## HTML - cabeçalhos</span></span>
-<span id="cb35-224"><a href="#cb35-224" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-225"><a href="#cb35-225" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Antes do html</span>
-<span id="cb35-226"><a href="#cb35-226" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">:</span> true</span>
-<span id="cb35-227"><a href="#cb35-227" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">-</span>depth<span class="sc">:</span> <span class="dv">4</span></span>
-<span id="cb35-228"><a href="#cb35-228" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">-</span>location<span class="sc">:</span> left</span>
-<span id="cb35-229"><a href="#cb35-229" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Depois do html</span>
-<span id="cb35-230"><a href="#cb35-230" aria-hidden="true" tabindex="-1"></a>theme<span class="sc">:</span> <span class="fu">default</span> (Outros em https<span class="sc">:</span><span class="er">//</span>quarto.org<span class="sc">/</span>docs<span class="sc">/</span>output<span class="sc">-</span>formats<span class="sc">/</span>html<span class="sc">-</span>themes.html) </span>
-<span id="cb35-231"><a href="#cb35-231" aria-hidden="true" tabindex="-1"></a>html<span class="sc">-</span>math<span class="sc">-</span>method<span class="sc">:</span> katex</span>
-<span id="cb35-232"><a href="#cb35-232" aria-hidden="true" tabindex="-1"></a>code<span class="sc">-</span>tools<span class="sc">:</span> true</span>
-<span id="cb35-233"><a href="#cb35-233" aria-hidden="true" tabindex="-1"></a>code<span class="sc">-</span>line<span class="sc">-</span>numbers<span class="sc">:</span> false</span>
-<span id="cb35-234"><a href="#cb35-234" aria-hidden="true" tabindex="-1"></a>self<span class="sc">-</span>contained<span class="sc">:</span> false</span>
-<span id="cb35-235"><a href="#cb35-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-236"><a href="#cb35-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-237"><a href="#cb35-237" aria-hidden="true" tabindex="-1"></a><span class="fu">## Revealjs - Apresentações</span></span>
-<span id="cb35-238"><a href="#cb35-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-239"><a href="#cb35-239" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Nova página</span></span>
-<span id="cb35-240"><a href="#cb35-240" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-241"><a href="#cb35-241" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span> <span class="co">#Três ou mais tracinhos</span></span>
-<span id="cb35-242"><a href="#cb35-242" aria-hidden="true" tabindex="-1"></a><span class="do">## Header 2 também cria nova página</span></span>
-<span id="cb35-243"><a href="#cb35-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-244"><a href="#cb35-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-245"><a href="#cb35-245" aria-hidden="true" tabindex="-1"></a>####hox</span>
-<span id="cb35-246"><a href="#cb35-246" aria-hidden="true" tabindex="-1"></a>::: Box ou info-box</span>
-<span id="cb35-247"><a href="#cb35-247" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-248"><a href="#cb35-248" aria-hidden="true" tabindex="-1"></a>asdasd</span>
-<span id="cb35-249"><a href="#cb35-249" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-250"><a href="#cb35-250" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-251"><a href="#cb35-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-252"><a href="#cb35-252" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Incremental</span></span>
-<span id="cb35-253"><a href="#cb35-253" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-254"><a href="#cb35-254" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Para tudo ser incremental, no cabeçalho colocar incremental<span class="sc">:</span> true   </span>
-<span id="cb35-255"><a href="#cb35-255" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Para tornar uma lista particular incremental<span class="sc">:</span></span>
-<span id="cb35-256"><a href="#cb35-256" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.incremental}</span>
-<span id="cb35-257"><a href="#cb35-257" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Eat spaghetti</span>
-<span id="cb35-258"><a href="#cb35-258" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Drink wine</span>
-<span id="cb35-259"><a href="#cb35-259" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-260"><a href="#cb35-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-261"><a href="#cb35-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-262"><a href="#cb35-262" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Colunas múltiplas</span></span>
-<span id="cb35-263"><a href="#cb35-263" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-264"><a href="#cb35-264" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span><span class="er">:</span> {.columns}</span>
-<span id="cb35-265"><a href="#cb35-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-266"><a href="#cb35-266" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column width<span class="ot">=</span><span class="st">"40%"</span>}</span>
-<span id="cb35-267"><a href="#cb35-267" aria-hidden="true" tabindex="-1"></a>contents...</span>
-<span id="cb35-268"><a href="#cb35-268" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-269"><a href="#cb35-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-270"><a href="#cb35-270" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.column width<span class="ot">=</span><span class="st">"60%"</span>}</span>
-<span id="cb35-271"><a href="#cb35-271" aria-hidden="true" tabindex="-1"></a>contents...</span>
-<span id="cb35-272"><a href="#cb35-272" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-273"><a href="#cb35-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-274"><a href="#cb35-274" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span></span>
-<span id="cb35-275"><a href="#cb35-275" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-276"><a href="#cb35-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-277"><a href="#cb35-277" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Footer global</span></span>
-<span id="cb35-278"><a href="#cb35-278" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-279"><a href="#cb35-279" aria-hidden="true" tabindex="-1"></a>No cabeçalho<span class="sc">:</span></span>
-<span id="cb35-280"><a href="#cb35-280" aria-hidden="true" tabindex="-1"></a>footer<span class="sc">:</span> <span class="st">"`Mais bonitinho com crase`"</span></span>
-<span id="cb35-281"><a href="#cb35-281" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-282"><a href="#cb35-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-283"><a href="#cb35-283" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Footer por página</span></span>
-<span id="cb35-284"><a href="#cb35-284" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-285"><a href="#cb35-285" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> footer</span>
-<span id="cb35-286"><a href="#cb35-286" aria-hidden="true" tabindex="-1"></a>Custom footer text</span>
-<span id="cb35-287"><a href="#cb35-287" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-288"><a href="#cb35-288" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-289"><a href="#cb35-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-290"><a href="#cb35-290" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Aside (tipo de footer sem referência)</span></span>
-<span id="cb35-291"><a href="#cb35-291" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-292"><a href="#cb35-292" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> aside</span>
-<span id="cb35-293"><a href="#cb35-293" aria-hidden="true" tabindex="-1"></a>Some additional commentary of more peripheral interest.</span>
-<span id="cb35-294"><a href="#cb35-294" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-295"><a href="#cb35-295" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-296"><a href="#cb35-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-297"><a href="#cb35-297" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Aside (tipo de footer com referência)</span></span>
-<span id="cb35-298"><a href="#cb35-298" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-299"><a href="#cb35-299" aria-hidden="true" tabindex="-1"></a>Numera automaticamente</span>
-<span id="cb35-300"><a href="#cb35-300" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Green <span class="sc">^</span>[Aqui a nota de rodapé]</span>
-<span id="cb35-301"><a href="#cb35-301" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Brown</span>
-<span id="cb35-302"><a href="#cb35-302" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Purple</span>
-<span id="cb35-303"><a href="#cb35-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-304"><a href="#cb35-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-305"><a href="#cb35-305" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Smaller fonts</span></span>
-<span id="cb35-306"><a href="#cb35-306" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-307"><a href="#cb35-307" aria-hidden="true" tabindex="-1"></a><span class="do">## Slide Title {.smaller}</span></span>
+<span id="cb35-206"><a href="#cb35-206" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Duas colunas</span></span>
+<span id="cb35-207"><a href="#cb35-207" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-208"><a href="#cb35-208" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {layout<span class="sc">-</span>ncol<span class="ot">=</span><span class="dv">2</span>}</span>
+<span id="cb35-209"><a href="#cb35-209" aria-hidden="true" tabindex="-1"></a>asdasd  </span>
+<span id="cb35-210"><a href="#cb35-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-211"><a href="#cb35-211" aria-hidden="true" tabindex="-1"></a>asdasd</span>
+<span id="cb35-212"><a href="#cb35-212" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-213"><a href="#cb35-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-214"><a href="#cb35-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-215"><a href="#cb35-215" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Múltiplas colunas</span></span>
+<span id="cb35-216"><a href="#cb35-216" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-217"><a href="#cb35-217" aria-hidden="true" tabindex="-1"></a>Duas linhas, a primeira com <span class="dv">2</span> e a segunda com <span class="dv">1</span> gráfico, todos com o mesmo tamanho.</span>
+<span id="cb35-218"><a href="#cb35-218" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {layout<span class="ot">=</span><span class="st">"[[1,1], [1]]"</span>}</span>
+<span id="cb35-219"><a href="#cb35-219" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Surus](surus.png)</span>
+<span id="cb35-220"><a href="#cb35-220" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Surus1](surus1.png)</span>
+<span id="cb35-221"><a href="#cb35-221" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Surus2](surus2.png)</span>
+<span id="cb35-222"><a href="#cb35-222" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-223"><a href="#cb35-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-224"><a href="#cb35-224" aria-hidden="true" tabindex="-1"></a>Para layout com percentuais<span class="sc">:</span></span>
+<span id="cb35-225"><a href="#cb35-225" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {layout<span class="ot">=</span><span class="st">"[[40,-20,40], [100]]"</span>}</span>
+<span id="cb35-226"><a href="#cb35-226" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-227"><a href="#cb35-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-228"><a href="#cb35-228" aria-hidden="true" tabindex="-1"></a><span class="fu">## HTML - cabeçalhos</span></span>
+<span id="cb35-229"><a href="#cb35-229" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-230"><a href="#cb35-230" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Antes do html</span>
+<span id="cb35-231"><a href="#cb35-231" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">:</span> true</span>
+<span id="cb35-232"><a href="#cb35-232" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">-</span>depth<span class="sc">:</span> <span class="dv">4</span></span>
+<span id="cb35-233"><a href="#cb35-233" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">-</span>location<span class="sc">:</span> left</span>
+<span id="cb35-234"><a href="#cb35-234" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Depois do html</span>
+<span id="cb35-235"><a href="#cb35-235" aria-hidden="true" tabindex="-1"></a>theme<span class="sc">:</span> <span class="fu">default</span> (Outros em https<span class="sc">:</span><span class="er">//</span>quarto.org<span class="sc">/</span>docs<span class="sc">/</span>output<span class="sc">-</span>formats<span class="sc">/</span>html<span class="sc">-</span>themes.html) </span>
+<span id="cb35-236"><a href="#cb35-236" aria-hidden="true" tabindex="-1"></a>html<span class="sc">-</span>math<span class="sc">-</span>method<span class="sc">:</span> katex</span>
+<span id="cb35-237"><a href="#cb35-237" aria-hidden="true" tabindex="-1"></a>code<span class="sc">-</span>tools<span class="sc">:</span> true</span>
+<span id="cb35-238"><a href="#cb35-238" aria-hidden="true" tabindex="-1"></a>code<span class="sc">-</span>line<span class="sc">-</span>numbers<span class="sc">:</span> false</span>
+<span id="cb35-239"><a href="#cb35-239" aria-hidden="true" tabindex="-1"></a>self<span class="sc">-</span>contained<span class="sc">:</span> false</span>
+<span id="cb35-240"><a href="#cb35-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-241"><a href="#cb35-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-242"><a href="#cb35-242" aria-hidden="true" tabindex="-1"></a><span class="fu">## Revealjs - Apresentações</span></span>
+<span id="cb35-243"><a href="#cb35-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-244"><a href="#cb35-244" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Nova página</span></span>
+<span id="cb35-245"><a href="#cb35-245" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-246"><a href="#cb35-246" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span> <span class="co">#Três ou mais tracinhos</span></span>
+<span id="cb35-247"><a href="#cb35-247" aria-hidden="true" tabindex="-1"></a><span class="do">## Header 2 também cria nova página</span></span>
+<span id="cb35-248"><a href="#cb35-248" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-249"><a href="#cb35-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-250"><a href="#cb35-250" aria-hidden="true" tabindex="-1"></a>####hox</span>
+<span id="cb35-251"><a href="#cb35-251" aria-hidden="true" tabindex="-1"></a>::: Box ou info-box</span>
+<span id="cb35-252"><a href="#cb35-252" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-253"><a href="#cb35-253" aria-hidden="true" tabindex="-1"></a>asdasd</span>
+<span id="cb35-254"><a href="#cb35-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-255"><a href="#cb35-255" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-256"><a href="#cb35-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-257"><a href="#cb35-257" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Incremental</span></span>
+<span id="cb35-258"><a href="#cb35-258" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-259"><a href="#cb35-259" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Para tudo ser incremental, no cabeçalho colocar incremental<span class="sc">:</span> true   </span>
+<span id="cb35-260"><a href="#cb35-260" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Para tornar uma lista particular incremental<span class="sc">:</span></span>
+<span id="cb35-261"><a href="#cb35-261" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.incremental}</span>
+<span id="cb35-262"><a href="#cb35-262" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Eat spaghetti</span>
+<span id="cb35-263"><a href="#cb35-263" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Drink wine</span>
+<span id="cb35-264"><a href="#cb35-264" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-265"><a href="#cb35-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-266"><a href="#cb35-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-267"><a href="#cb35-267" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Colunas múltiplas</span></span>
+<span id="cb35-268"><a href="#cb35-268" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-269"><a href="#cb35-269" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span><span class="er">:</span> {.columns}</span>
+<span id="cb35-270"><a href="#cb35-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-271"><a href="#cb35-271" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column width<span class="ot">=</span><span class="st">"40%"</span>}</span>
+<span id="cb35-272"><a href="#cb35-272" aria-hidden="true" tabindex="-1"></a>contents...</span>
+<span id="cb35-273"><a href="#cb35-273" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-274"><a href="#cb35-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-275"><a href="#cb35-275" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.column width<span class="ot">=</span><span class="st">"60%"</span>}</span>
+<span id="cb35-276"><a href="#cb35-276" aria-hidden="true" tabindex="-1"></a>contents...</span>
+<span id="cb35-277"><a href="#cb35-277" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-278"><a href="#cb35-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-279"><a href="#cb35-279" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span></span>
+<span id="cb35-280"><a href="#cb35-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-281"><a href="#cb35-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-282"><a href="#cb35-282" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Footer global</span></span>
+<span id="cb35-283"><a href="#cb35-283" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-284"><a href="#cb35-284" aria-hidden="true" tabindex="-1"></a>No cabeçalho<span class="sc">:</span></span>
+<span id="cb35-285"><a href="#cb35-285" aria-hidden="true" tabindex="-1"></a>footer<span class="sc">:</span> <span class="st">"`Mais bonitinho com crase`"</span></span>
+<span id="cb35-286"><a href="#cb35-286" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-287"><a href="#cb35-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-288"><a href="#cb35-288" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Footer por página</span></span>
+<span id="cb35-289"><a href="#cb35-289" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-290"><a href="#cb35-290" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> footer</span>
+<span id="cb35-291"><a href="#cb35-291" aria-hidden="true" tabindex="-1"></a>Custom footer text</span>
+<span id="cb35-292"><a href="#cb35-292" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-293"><a href="#cb35-293" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-294"><a href="#cb35-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-295"><a href="#cb35-295" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Aside (tipo de footer sem referência)</span></span>
+<span id="cb35-296"><a href="#cb35-296" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-297"><a href="#cb35-297" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> aside</span>
+<span id="cb35-298"><a href="#cb35-298" aria-hidden="true" tabindex="-1"></a>Some additional commentary of more peripheral interest.</span>
+<span id="cb35-299"><a href="#cb35-299" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-300"><a href="#cb35-300" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-301"><a href="#cb35-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-302"><a href="#cb35-302" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Aside (tipo de footer com referência)</span></span>
+<span id="cb35-303"><a href="#cb35-303" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-304"><a href="#cb35-304" aria-hidden="true" tabindex="-1"></a>Numera automaticamente</span>
+<span id="cb35-305"><a href="#cb35-305" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Green <span class="sc">^</span>[Aqui a nota de rodapé]</span>
+<span id="cb35-306"><a href="#cb35-306" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Brown</span>
+<span id="cb35-307"><a href="#cb35-307" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Purple</span>
 <span id="cb35-308"><a href="#cb35-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb35-309"><a href="#cb35-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-310"><a href="#cb35-310" aria-hidden="true" tabindex="-1"></a><span class="fu">#### scrollable</span></span>
+<span id="cb35-310"><a href="#cb35-310" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Smaller fonts</span></span>
 <span id="cb35-311"><a href="#cb35-311" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-312"><a href="#cb35-312" aria-hidden="true" tabindex="-1"></a><span class="do">## Slide Title {.scrollable}</span></span>
+<span id="cb35-312"><a href="#cb35-312" aria-hidden="true" tabindex="-1"></a><span class="do">## Slide Title {.smaller}</span></span>
 <span id="cb35-313"><a href="#cb35-313" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb35-314"><a href="#cb35-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-315"><a href="#cb35-315" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Notas do apresentador</span></span>
+<span id="cb35-315"><a href="#cb35-315" aria-hidden="true" tabindex="-1"></a><span class="fu">#### scrollable</span></span>
 <span id="cb35-316"><a href="#cb35-316" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-317"><a href="#cb35-317" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.notes}</span>
-<span id="cb35-318"><a href="#cb35-318" aria-hidden="true" tabindex="-1"></a>Speaker notes go here.</span>
-<span id="cb35-319"><a href="#cb35-319" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-320"><a href="#cb35-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-321"><a href="#cb35-321" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Temas</span></span>
-<span id="cb35-322"><a href="#cb35-322" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-323"><a href="#cb35-323" aria-hidden="true" tabindex="-1"></a>theme<span class="sc">:</span> default</span>
-<span id="cb35-324"><a href="#cb35-324" aria-hidden="true" tabindex="-1"></a>Outros<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>quarto.org<span class="sc">/</span>docs<span class="sc">/</span>presentations<span class="sc">/</span>revealjs<span class="sc">/</span></span>
+<span id="cb35-317"><a href="#cb35-317" aria-hidden="true" tabindex="-1"></a><span class="do">## Slide Title {.scrollable}</span></span>
+<span id="cb35-318"><a href="#cb35-318" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-319"><a href="#cb35-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-320"><a href="#cb35-320" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Notas do apresentador</span></span>
+<span id="cb35-321"><a href="#cb35-321" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-322"><a href="#cb35-322" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.notes}</span>
+<span id="cb35-323"><a href="#cb35-323" aria-hidden="true" tabindex="-1"></a>Speaker notes go here.</span>
+<span id="cb35-324"><a href="#cb35-324" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
 <span id="cb35-325"><a href="#cb35-325" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-326"><a href="#cb35-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-327"><a href="#cb35-327" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Slide com diferente background</span></span>
-<span id="cb35-328"><a href="#cb35-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-329"><a href="#cb35-329" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
-<span id="cb35-330"><a href="#cb35-330" aria-hidden="true" tabindex="-1"></a><span class="do">## Título {background-color="aquamarine"}</span></span>
-<span id="cb35-331"><a href="#cb35-331" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-332"><a href="#cb35-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-333"><a href="#cb35-333" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Texto incremental num box</span></span>
-<span id="cb35-334"><a href="#cb35-334" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb35-335"><a href="#cb35-335" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> columns</span>
-<span id="cb35-336"><a href="#cb35-336" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column .box width<span class="ot">=</span><span class="st">"40%"</span>}</span>
-<span id="cb35-337"><a href="#cb35-337" aria-hidden="true" tabindex="-1"></a>   MATERIALS AND METHODS</span>
-<span id="cb35-338"><a href="#cb35-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-339"><a href="#cb35-339" aria-hidden="true" tabindex="-1"></a>   <span class="sc">*</span>Experimental design<span class="sc">*</span> <span class="er">**</span>(condensed version)<span class="sc">**</span></span>
-<span id="cb35-340"><a href="#cb35-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-341"><a href="#cb35-341" aria-hidden="true" tabindex="-1"></a>   <span class="sc">-</span>   <span class="er">**</span>Experimental plots were planted   with different plant communities spanning [plant diversity gradient of one, four, and <span class="dv">16</span> species]{.fragment .highlight<span class="sc">-</span>blue}, which were randomly chosen from the species <span class="fu">listed</span> (<span class="dv">5</span> plant functional groups <span class="sc">--</span> <span class="dv">19</span> species <span class="cf">in</span> total)<span class="sc">**</span></span>
-<span id="cb35-342"><a href="#cb35-342" aria-hidden="true" tabindex="-1"></a>   <span class="sc">-</span>   [Plots were divided into three subplots]{.fragment .highlight<span class="sc">-</span>red}</span>
+<span id="cb35-326"><a href="#cb35-326" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Temas</span></span>
+<span id="cb35-327"><a href="#cb35-327" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-328"><a href="#cb35-328" aria-hidden="true" tabindex="-1"></a>theme<span class="sc">:</span> default</span>
+<span id="cb35-329"><a href="#cb35-329" aria-hidden="true" tabindex="-1"></a>Outros<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>quarto.org<span class="sc">/</span>docs<span class="sc">/</span>presentations<span class="sc">/</span>revealjs<span class="sc">/</span></span>
+<span id="cb35-330"><a href="#cb35-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-331"><a href="#cb35-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-332"><a href="#cb35-332" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Slide com diferente background</span></span>
+<span id="cb35-333"><a href="#cb35-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-334"><a href="#cb35-334" aria-hidden="true" tabindex="-1"></a><span class="in">``` r</span></span>
+<span id="cb35-335"><a href="#cb35-335" aria-hidden="true" tabindex="-1"></a><span class="do">## Título {background-color="aquamarine"}</span></span>
+<span id="cb35-336"><a href="#cb35-336" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-337"><a href="#cb35-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-338"><a href="#cb35-338" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Texto incremental num box</span></span>
+<span id="cb35-339"><a href="#cb35-339" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb35-340"><a href="#cb35-340" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> columns</span>
+<span id="cb35-341"><a href="#cb35-341" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column .box width<span class="ot">=</span><span class="st">"40%"</span>}</span>
+<span id="cb35-342"><a href="#cb35-342" aria-hidden="true" tabindex="-1"></a>   MATERIALS AND METHODS</span>
 <span id="cb35-343"><a href="#cb35-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-344"><a href="#cb35-344" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-344"><a href="#cb35-344" aria-hidden="true" tabindex="-1"></a>   <span class="sc">*</span>Experimental design<span class="sc">*</span> <span class="er">**</span>(condensed version)<span class="sc">**</span></span>
 <span id="cb35-345"><a href="#cb35-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-346"><a href="#cb35-346" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.column width<span class="ot">=</span><span class="st">"56%"</span>}</span>
-<span id="cb35-347"><a href="#cb35-347" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> fragment</span>
-<span id="cb35-348"><a href="#cb35-348" aria-hidden="true" tabindex="-1"></a>This is <span class="cf">in</span> fact a <span class="sc">**</span>split<span class="sc">-</span>plot design<span class="sc">**!</span></span>
-<span id="cb35-349"><a href="#cb35-349" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
+<span id="cb35-346"><a href="#cb35-346" aria-hidden="true" tabindex="-1"></a>   <span class="sc">-</span>   <span class="er">**</span>Experimental plots were planted   with different plant communities spanning [plant diversity gradient of one, four, and <span class="dv">16</span> species]{.fragment .highlight<span class="sc">-</span>blue}, which were randomly chosen from the species <span class="fu">listed</span> (<span class="dv">5</span> plant functional groups <span class="sc">--</span> <span class="dv">19</span> species <span class="cf">in</span> total)<span class="sc">**</span></span>
+<span id="cb35-347"><a href="#cb35-347" aria-hidden="true" tabindex="-1"></a>   <span class="sc">-</span>   [Plots were divided into three subplots]{.fragment .highlight<span class="sc">-</span>red}</span>
+<span id="cb35-348"><a href="#cb35-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-349"><a href="#cb35-349" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
 <span id="cb35-350"><a href="#cb35-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-351"><a href="#cb35-351" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> fragment</span>
-<span id="cb35-352"><a href="#cb35-352" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb35-353"><a href="#cb35-353" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
+<span id="cb35-351"><a href="#cb35-351" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.column width<span class="ot">=</span><span class="st">"56%"</span>}</span>
+<span id="cb35-352"><a href="#cb35-352" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> fragment</span>
+<span id="cb35-353"><a href="#cb35-353" aria-hidden="true" tabindex="-1"></a>This is <span class="cf">in</span> fact a <span class="sc">**</span>split<span class="sc">-</span>plot design<span class="sc">**!</span></span>
 <span id="cb35-354"><a href="#cb35-354" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
-<span id="cb35-355"><a href="#cb35-355" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb35-355"><a href="#cb35-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-356"><a href="#cb35-356" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> fragment</span>
+<span id="cb35-357"><a href="#cb35-357" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb35-358"><a href="#cb35-358" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
+<span id="cb35-359"><a href="#cb35-359" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
+<span id="cb35-360"><a href="#cb35-360" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
