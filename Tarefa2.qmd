@@ -10,7 +10,7 @@ Seu melhor amigo aqui é a página de referência do Quarto para Revealjs.
 [Help Quarto revealJS](https://quarto.org/docs/presentations/revealjs/#overview)
 :::
 
-Cada um deve apresentar seu próprio projeto de pós-graduação ou resultados do estudo usando o modo de apresentação do Quarto chamado RevealJS.
+A tarefa consiste em apresentar seu próprio projeto de pós-graduação ou resultados do estudo usando o modo de apresentação do Quarto chamado RevealJS.
 
 File>New File>Quarto Document>Presentation>
 
