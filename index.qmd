@@ -31,7 +31,7 @@ A [tarefa 1](Tarefa1.html) deve ser finalizada até o dia 20/08, com todos os ar
 :::{.callout}
 **TAREFA 2**
 
-A [tarefa 2](Tarefa2.html) deve ser finalizada até o dia 20/08, com todos os arquivos disponíveis no Github. 
+A [tarefa 2](Tarefa2.html) deve ser finalizada até o dia 27/08, com todos os arquivos disponíveis no Github. 
 
 :::
 
