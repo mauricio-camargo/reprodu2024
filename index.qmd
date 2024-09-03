@@ -20,6 +20,8 @@ Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB
 
 [AULA 4: Tutorial do Quarto](Tutorial_Quarto.html)
 
+[AULA 5: Aula de Shiny](Aula_Shiny.html)
+
 
 :::{.callout}
 **TAREFA 1**
