@@ -1,0 +1,12 @@
+name: app61
+title: ex_shiny6
+username: mauricio-camargo
+account: mauricio-camargo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12598990
+bundleId: 9058986
+url: https://mauricio-camargo.shinyapps.io/app61/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
