@@ -8,7 +8,7 @@ Cada exemplo abaixo traz um arquivo em R contendo os códigos do aplicativo e um
 
 Você pode baixar o arquivo R e executar o app no RStudio. 
 
-Você também pode publicar gratuitamente o app no site do RStudio, que se chama `shinyapps`. Para isso, após visualizar o app (usando o botão `Run App`), clique no botão azul chamado `Publish the application` e faça sua inscrição no site para publicar gratuitamente.
+Você também pode publicar gratuitamente o app no site do RStudio,  chamado `shinyapps.io`. Para isso, após visualizar o app (usando o botão `Run App`), clique no botão azul chamado `Publish the application` e faça sua inscrição no site para publicar gratuitamente até 5 apps.
 
 <!--
 
@@ -43,3 +43,12 @@ Exemplo 1 foi apagado pois tem o limite de 5 app por pessoa.
 
 [App6 online](https://mauricio-camargo.shinyapps.io/app61)  
 [Códigos do App6](ex_shiny6/app.R)  
+
+
+###  Exemplos mais complexos podem ser encontrados nestas páginas:
+
+[Galeria de Shiny](https://shiny.posit.co/r/gallery/)
+[Galeria de Shiny mais complexos](https://www.appsilon.com/shiny-demo-gallery)
+[200 exemplos de Shiny com códigos](https://github.com/rstudio/shiny-examples)
+[Site real em Shiny](https://cashflowcalc.com/)
+[Site governamental em Shiny](https://nz-stefan.shinyapps.io/commute-explorer-2/)
