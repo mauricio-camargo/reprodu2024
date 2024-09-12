@@ -22,6 +22,8 @@ Esta é uma disciplina do `PPGAMB`, que também é oferecida para `PPGO`, `PPGOB
 
 [AULA 5: Aula de Shiny](Aula_Shiny.html)
 
+-  [Vídeo da aula de Shiny em 2023](https://youtu.be/qsCxsF8qbIw)
+
 -  [Exemplos de Shiny](Exemplos_Shiny.html)
 
 
